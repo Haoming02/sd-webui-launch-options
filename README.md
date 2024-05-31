@@ -14,12 +14,13 @@ Introducing, **Launch Options**! Whenever you launch the Webui, it will first as
 ## How to Use
 
 - **Options**
-
   - You can edit the `config.yaml` **YAML** file to customize the settings to ask
   - The **key** should be the same key from the `config.json` file inside the Webui folder
   - The **value** should be an array of options to choose from
   - The values can be strings or data structures
-  - Examples are included
+  - Alternatively, if the value is only a **single** entry pointing to a **folder**, the options will become all filenames within that folder *(**eg.** point it to `~\webui\models\Stable-diffusion`)*
+
+> Some examples are included
 
 - **Launch**
   - When you launch the Webui, it will ask for each of the settings specified in the `config.yaml`

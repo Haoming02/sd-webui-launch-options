@@ -1,14 +1,2 @@
-hidden_tabs:
-  - []
-  - ["Train"]
-  - ["Checkpoint Merger", "Train"]
-
-delete_this_entry:
-  - this is
-  - just an
-  - example
-
-# sd_model_checkpoint:
-#   - animagineXLV3_v30.safetensors
-#   - juggernautXL_v7FP16VAEFix.safetensors
-#   - anything-v3.safetensors
+sd_model_checkpoint:
+  - C:\Users\admin\Documents\GitHub\stable-diffusion-webui-forge\models\Stable-diffusion

@@ -27,7 +27,7 @@ def config():
 
     print("\n\n\n===== Launch Options =====")
 
-    for key, options in options.items():
+    for key, option in options.items():
 
         if key not in settings.keys():
             print(f"\nInvalid Option: [bold red]{key}[/bold red] - Skipping...")
@@ -37,7 +37,13 @@ def config():
             f"\nSetting: [bold cyan]{key}[/bold cyan] (current: [dark_green]{settings[key]}[/dark_green])"
         )
 
-        for i, opt in enumerate(options):
+        if len(option) == 1:
+            if os.path.isdir(option[0]):
+                option = os.listdir(option[0])
+            else:
+                continue
+
+        for i, opt in enumerate(option):
             print(f"    [{i}]: {opt}")
 
         try:
@@ -51,9 +57,9 @@ def config():
             continue
 
         try:
-            settings[key] = options[int(opt)]
+            settings[key] = option[int(opt)]
             print(
-                f"\n[bright_blue]{key}[/bright_blue] -> [light_green]{options[int(opt)]}[/light_green]"
+                f"\n[bright_blue]{key}[/bright_blue] -> [light_green]{option[int(opt)]}[/light_green]"
             )
         except ValueError:
             print("\nInvalid Input - Skipping...")
