@@ -1,2 +1,2 @@
 sd_model_checkpoint:
-  - C:\Users\admin\Documents\GitHub\stable-diffusion-webui-forge\models\Stable-diffusion
+  - .\models\Stable-diffusion
